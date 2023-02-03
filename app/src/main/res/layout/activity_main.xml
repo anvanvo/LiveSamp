@@ -10,11 +10,11 @@
         android:id="@+id/tvChannelName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="200dp"
         android:text="Channel name"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/etChannelName"
-        app:layout_constraintStart_toStartOf="@+id/etChannelName" />
+        app:layout_constraintStart_toStartOf="@+id/etChannelName"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etChannelName"
@@ -22,10 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:hint="Channel name"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvChannelName" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etUid"
@@ -37,16 +36,24 @@
         app:layout_constraintStart_toStartOf="@+id/etChannelName"
         app:layout_constraintTop_toBottomOf="@+id/etChannelName" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCreateHost"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etToken"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#2196F3"
-        android:text="Create Host"
-        android:textAllCaps="false"
+        android:layout_marginHorizontal="10dp"
+        android:hint="Token"
+        android:text="007eJxTYLBYrTOd4+a3eNE0nX0LoqefTNQwvhC1xtHDp+vSdHnTtUsUGFItDM2SzI1NzI0STU3MDYwTjQ2TjI0TU01NLExSkw2SpuTcSW4IZGQ4xZPBwAiFID4TQ2IeAwMAog8dJQ=="
         app:layout_constraintEnd_toEndOf="@+id/etChannelName"
         app:layout_constraintStart_toStartOf="@+id/etChannelName"
         app:layout_constraintTop_toBottomOf="@+id/etUid" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/scAudience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Audience Role "
+        app:layout_constraintStart_toStartOf="@+id/etToken"
+        app:layout_constraintTop_toBottomOf="@+id/etToken" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnJoinRoom"
@@ -55,7 +62,7 @@
         android:backgroundTint="#2196F3"
         android:text="Join"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/btnCreateHost"
-        app:layout_constraintStart_toStartOf="@+id/btnCreateHost"
-        app:layout_constraintTop_toBottomOf="@+id/btnCreateHost" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scAudience" />
 </androidx.constraintlayout.widget.ConstraintLayout>

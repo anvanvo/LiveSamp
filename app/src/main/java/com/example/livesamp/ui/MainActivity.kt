@@ -25,8 +25,11 @@ class MainActivity : BaseMVVMActivity<ActivityMainBinding, MainViewModel>() {
         viewBinding.btnJoinRoom.setOnClickListener {
             val channel = viewBinding.etChannelName.text.toString()
             val uid = viewBinding.etUid.text.toString().toIntOrNull()
-            if (checkSelfPermissions() && channel.isNotBlank() && uid != null) {
-                LiveStreamActivity.startLiveStreamScreen(this, channel, uid)
+            val token = viewBinding.etToken.text.toString()
+            val isAudience = viewBinding.scAudience.isChecked
+
+            if (checkSelfPermissions() && uid != null && channel.isNotBlank() && token.isNotBlank()) {
+                LiveStreamActivity.startLiveStreamScreen(this, channel, uid, token, isAudience)
             }
         }
     }

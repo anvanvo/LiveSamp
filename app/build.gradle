@@ -20,7 +20,6 @@ android {
     buildTypes {
         debug {
             buildConfigField("String", "APP_ID_AGORA", "\"e816b73472a54703a31b33ae5484ec0b\"")
-            buildConfigField("String", "TOKEN_AGORA", "\"007eJxTYFhwutf3Xr3k4uSHS5UPCZb/lPs+iXsq82TLw+rxLtY65XsUGFItDM2SzI1NzI0STU3MDYwTjQ2TjI0TU01NLExSkw2S3DtvJzcEMjKsyVJiZGSAQBCfmSExL5WBAQDsSB2k\"")
         }
         release {
             minifyEnabled false
